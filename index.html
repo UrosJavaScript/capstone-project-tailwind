@@ -1,0 +1,1025 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="./images/favicon.png" />
+    <link rel="stylesheet" href="./src/style.scss" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Capstone-2</title>
+
+    <!-- Include Handlebars from a CDN -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script> -->
+  </head>
+  <body class="bg-white">
+    <!-- Header -->
+    <header class="pt-8 max-lg:pb-8 bg-darkBlue">
+      <div class="wrapper">
+        <!-- navigation -->
+        <nav
+          class="flex justify-between lg:items-center max-lg:pb[45px] lg:pb-[64px]"
+        >
+          <img
+            src="./images/navigation/logo.svg"
+            alt="logo"
+            id="menu-logo"
+            class="max-lg:mb-[45px] w-[70px]"
+          />
+
+          <!-- Menu Items -->
+          <div class="flex gap-[45px] max-lg:hidden">
+            <a
+              href="/"
+              class="text-base font-semibold transition duration-700 text-primary font-inter hover:text-primary"
+              >Home</a
+            >
+
+            <a
+              href="/"
+              class="text-base font-semibold text-white transition duration-700 font-inter hover:text-primary"
+              >About Us</a
+            >
+
+            <a
+              href="/"
+              class="text-base font-semibold text-white transition duration-700 font-inter hover:text-primary"
+              >Services</a
+            >
+
+            <a
+              href="/"
+              class="text-base font-semibold text-white transition duration-700 font-inter hover:text-primary"
+              >Blog</a
+            >
+
+            <a
+              href="/"
+              class="text-base font-semibold text-white transition duration-700 font-inter hover:text-primary"
+              >Contact</a
+            >
+          </div>
+
+          <div class="flex max-lg:hidden">
+            <input
+              type="text"
+              class="rounded-[32px] focus:outline-none font-sans border border-borderOpacity placeholder:text-[#CCCCCC] placeholder:text-[15px] placeholder:font-medium bg-transparent text-white pl-[26px] pr-[50px] py-3"
+              placeholder="Search here..."
+            />
+            <img
+              src="./images/icons/search.svg"
+              alt="search"
+              class="-translate-x-10"
+            />
+          </div>
+
+          <!-- This is used to open the menu on mobile devices -->
+          <div class="lg:hidden" id="menu-btn">
+            <!-- flex items-center -->
+            <button class="transition duration-300">
+              <img src="./images/icons/menu.svg" alt="menu" />
+            </button>
+          </div>
+
+          <!-- Menu Mobile Items -->
+          <div id="mobile-menu" class="hidden">
+            <div id="close-menu" class="fixed text-white top-4 right-6">
+              <button class="text-right text-secondary text-[42px]">
+                &times;
+              </button>
+            </div>
+
+            <div class="flex gap-[45px] flex-col items-center">
+              <a
+                href="/"
+                class="text-base font-semibold text-white transition duration-700 font-inter hover:text-primary"
+                >Home</a
+              >
+
+              <a
+                href="/"
+                class="text-base font-semibold text-white transition duration-700 font-inter hover:text-primary"
+                >About Us</a
+              >
+
+              <a
+                href="/"
+                class="text-base font-semibold text-white transition duration-700 font-inter hover:text-primary"
+                >Services</a
+              >
+
+              <a
+                href="/"
+                class="text-base font-semibold text-white transition duration-700 font-inter hover:text-primary"
+                >Blog</a
+              >
+
+              <a
+                href="/"
+                class="text-base font-semibold text-white transition duration-700 font-inter hover:text-primary"
+                >Contact</a
+              >
+
+              <div class="flex">
+                <input
+                  type="text"
+                  class="rounded-[32px] focus:outline-none font-sans border border-borderOpacity placeholder:text-[#CCCCCC] placeholder:text-[15px] placeholder:font-medium bg-transparent text-white pl-[26px] pr-[50px] py-3"
+                  placeholder="Search here..."
+                />
+                <img
+                  src="./images/icons/search.svg"
+                  alt="search"
+                  class="-translate-x-10"
+                />
+              </div>
+            </div>
+          </div>
+        </nav>
+
+        <!-- Hero-section -->
+        <div class="flex max-lg:flex-col w-full gap-[108px] max-lg:gap-[61px]">
+          <!-- left col -->
+          <div class="flex flex-col justify-center flex-1">
+            <p
+              class="text-[16px] leading-5 text-white font-inter font-semibold mb-3"
+            >
+              We are creative team.
+            </p>
+            <h1
+              class="font-bold text-white font-inter lg:leading-[57px] max-lg:leading-[37px] lg:text-[50px] max-lg:text-[33px] lg:max-w-[441px] max-lg:max-w-[291px] pb-[25px]"
+            >
+              The best way to promote business
+            </h1>
+            <p
+              class="text-[#C8CBCE] leading-[28px] font-inter font-medium text-[16px] lg:max-w-[450px] max-lg:max-w-[315px] mb-10"
+            >
+              There are many variations of passages of Lorem Ipsum available,
+              but the majority have suffered.
+            </p>
+
+            <div class="flex gap-[25px] max-lg:flex-col">
+              <div class="max-lg:ml-[23px]">
+                <button
+                  class="bg-primary px-[23px] py-[14px] rounded-[31px] text-white font-inter hover:bg-gradient-to-r from-current to-darkBlue"
+                >
+                  Discover More
+                </button>
+              </div>
+
+              <div>
+                <button
+                  class="bg-transparent px-[23px] py-[14px] rounded-[31px] text-white font-inter hover:bg-primary flex items-center gap-3 transition duration-700 ease-in-out"
+                >
+                  Explore Services
+                  <img src="./images/icons/arrow-right.svg" alt="arrow-right" />
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- right col -->
+          <div class="flex-1 lg:w-2/4 max-lg:flex max-lg:justify-center">
+            <img
+              src="./images/hero-section/hero-image.svg"
+              alt="hero"
+              class="h-auto max-lg:hidden"
+            />
+            <img
+              src="./images/hero-section/hero-image-mobile.svg"
+              alt="hero"
+              class="h-auto lg:hidden"
+            />
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Why Choose Us-section -->
+    <section class="bg-white lg:py-[120px] max-lg:py-16">
+      <div class="wrapper">
+        <div
+          class="flex w-full lg:gap-[100px] max-lg:gap-[41px] max-lg:flex-col"
+        >
+          <!-- left col -->
+          <div class="flex flex-1 gap-8">
+            <div class="flex flex-col gap-[30px]">
+              <img
+                src="./images/why-choose-section/img1.png"
+                alt="image-1"
+                class="sm:w-[270px] sm:h-[320px] max-sm:w-[148px] max-sm:h-[176px] row-start-1 row-end-3"
+              />
+              <img
+                src="./images/why-choose-section/img2.png"
+                alt="image-2"
+                class="sm:w-[270px] max-sm:w-[148px] max-sm:h-[176px] row-start-3 row-end-5"
+              />
+            </div>
+            <div class="flex items-center">
+              <img
+                src="./images/why-choose-section/img3.png"
+                alt="image-3"
+                class="sm:h-[429px] max-sm:h-[235px] max-sm:w-[164px] row-start-2 row-end-4"
+              />
+            </div>
+          </div>
+          <!-- right col -->
+          <div class="flex flex-col flex-1 max-lg:justify-center">
+            <p
+              class="font-semibold font-inter text-primary text-[18x] leading-6 mb-[15px]"
+            >
+              Why Choose Us
+            </p>
+            <p
+              class="mb-6 font-bold font-inter text-secondTextBlack md:text-[35px] max-md:text-[28px] leading-[45px]"
+            >
+              Make Your Customers <br />
+              Happy By Giving Services.
+            </p>
+
+            <p
+              class="mb-[30px] text-pColor font-roboto font-normal text-[16px] leading-7 md:max-w-[470px] md-max:max-w-[310px]"
+            >
+              It is a long established fact that a reader will be distracted by
+              the readable content of a page when looking at its layout. The
+              point of using Lorem Ipsum is that it has a more-or-less.
+            </p>
+
+            <p
+              class="font-normal text-pColor font-roboto text-[16px] leading-7 md:max-w-[470px] md-max:max-w-[310px]"
+            >
+              A domain name is one of the first steps to establishing your
+              brand. Secure a consistent brand image with a domain name that
+              matches your business.
+            </p>
+
+            <div>
+              <button
+                class="px-[38px] py-[18px] bg-primary text-white font-inter text-[16px] leading-[20px] font-semibold rounded-lg lg:mt-[50px] max-lg:mt-[30px] hover:bg-darkBlue"
+              >
+                Get Started
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About-section -->
+    <section class="lg:pt-[163px] lg:pb-[131px] max-lg:py-[100px]">
+      <div class="wrapper">
+        <div class="flex md:gap-[186px] max-md:gap-12 max-lg:flex-col">
+          <!-- left-col -->
+          <div class="flex flex-1 md:gap-[70px] max-md:gap-6 flex-col z-10">
+            <div class="flex flex-col">
+              <p
+                class="font-semibold font-inter text-[18px] leading-7 text-primary pb-[15px]"
+              >
+                About Our App
+              </p>
+              <p
+                class="text-textBlack font-inter max-md:text-[28px] md:text-[40px] leading-[48px] font-bold max-md:max-w-[313px]"
+              >
+                A new way to manage <br />
+                your online money.
+              </p>
+            </div>
+            <div
+              class="max-md:flex gap-x-[72px] gap-y-[40px] md:grid md:grid-cols-2 max-md:flex-col"
+            >
+              <div>
+                <img
+                  src="./images/about-section/security-icon.svg"
+                  alt="security"
+                />
+                <h2
+                  class="font-semibold text-textBlack font-inter text-[22px] leading-8 mt-[25px]"
+                >
+                  Security Maintenance
+                </h2>
+                <p
+                  class="font-normal font-inter text-[16px] leading-[26px] md:max-w-[250px] mt-3"
+                >
+                  The little rotter bevvy I gormless mush golly gosh cras.
+                </p>
+              </div>
+              <div>
+                <img
+                  src="./images/about-section/backup-icon.svg"
+                  alt="backup"
+                />
+                <h2
+                  class="font-semibold text-textBlack font-inter text-[22px] leading-8 mt-[25px]"
+                >
+                  Backup Database
+                </h2>
+                <p
+                  class="font-normal font-inter text-[16px] leading-[26px] md:max-w-[250px] mt-3"
+                >
+                  The little rotter bevvy I gormless mush golly gosh cras.
+                </p>
+              </div>
+              <div>
+                <img
+                  src="./images/about-section/server-icon.svg"
+                  alt="server"
+                />
+                <h2
+                  class="font-semibold text-textBlack font-inter text-[22px] leading-8 mt-[25px]"
+                >
+                  Server Maintenance
+                </h2>
+                <p
+                  class="font-normal font-inter text-[16px] leading-[26px] md:max-w-[250px] mt-3"
+                >
+                  The little rotter bevvy I gormless mush golly gosh cras.
+                </p>
+              </div>
+              <div>
+                <img
+                  src="./images/about-section/protectable-icon.svg"
+                  alt="protectable"
+                />
+                <h2
+                  class="font-semibold text-textBlack font-inter text-[22px] leading-8 mt-[25px]"
+                >
+                  No Risk Protectable
+                </h2>
+                <p
+                  class="font-normal font-inter text-[16px] leading-[26px] md:max-w-[250px] mt-3"
+                >
+                  The little rotter bevvy I gormless mush golly gosh cras.
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- right-col -->
+          <div class="flex flex-1 max-lg:justify-center">
+            <img
+              src="./images/about-section/iPhone.png"
+              alt="iphone"
+              class="md:h-[689px] max-md:w-[230px] max-md:h-[476px]"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Get started-section -->
+    <section class="bg-darkBlue py-[71px] w-full relative overflow-hidden">
+      <img
+        src="./images/about-section/ellipse-topLeft.png"
+        alt="ellipse"
+        class="absolute top-0 left-0 w-[346px] h-[357px] md:translate-x-0 md:translate-y-[-68%] max-md:translate-x-[-50%] max-md:translate-y-[-50%]"
+      />
+
+      <div class="wrapper">
+        <div
+          class="flex w-full md:items-center md:justify-between max-md:flex-col"
+        >
+          <!-- left-col -->
+          <div class="z-10">
+            <p
+              class="font-semibold text-white font-inter text-[16px] leading-[22px]"
+            >
+              Find Your Next Dream App
+            </p>
+            <p
+              class="font-bold text-white font-inter text-[40px] max-w-[318px] leading-[45px] mt-[15px]"
+            >
+              Get started with our free trial
+            </p>
+          </div>
+          <!-- right-col -->
+          <div class="flex gap-[15px] max-md:flex-col z-10 max-md:pt-9">
+            <div>
+              <button
+                class="font-semibold font-inter text-[16px] leading-[20px] px-[33px] py-[18px] bg-[#1E1E1E] rounded-[5px] text-white hover:bg-primary tranistion ease-in-out duration-700"
+              >
+                Get Pro Version
+              </button>
+            </div>
+            <div>
+              <button
+                class="font-semibold font-inter text-[16px] leading-[20px] text-white bg-primary px-[33px] py-[18px] rounded-[5px]"
+              >
+                Start Free Trial
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <img
+        src="./images/about-section/elipse-bottomRight.png"
+        alt="ellipse"
+        class="absolute bottom-[-120px] right-0 w-[346px] h-[357px] max-2xl:hidden"
+      />
+      <!-- md:translate-x-0 md:translate-y-[-68%] max-md:translate-x-[-50%] max-md:translate-y-[-50%] -->
+    </section>
+
+    <!-- Projects-section -->
+    <section class="bg-white lg:py-[121px] max-lg:py-[53px]">
+      <div class="wrapper">
+        <div class="flex flex-col items-center justify-center text-center">
+          <p
+            class="font-semibold font-inter text-[18px] leading-6 text-primary pb-[8px]"
+          >
+            Our Portfolio
+          </p>
+          <h3
+            class="font-inter pb-[15px] font-bold text-secondTextBlack lg:leading-[45px] max-lg:leading-[38px] lg:text-[40px] max-lg:text-[28px]"
+          >
+            Our Recent Projects
+          </h3>
+          <p
+            class="font-inter max-lg:max-w-[315px] text-pColor font-normal leading-[25px] text-[16px]"
+          >
+            There are many variations of passages of Lorem Ipsum available
+            <span class="max-lg:hidden"><br /></span>
+            but the majority have suffered alteration in some form.
+          </p>
+        </div>
+
+        <!-- Filters button -->
+        <div
+          class="flex items-center justify-center filters gap-[50px] mt-16 flex-wrap"
+        >
+          <button
+            class="py-3 font-semibold text-white rounded-lg px-9 filter bg-primary font-inter leading-7 text-[16px] transition"
+            data-filter="all"
+          >
+            All Project
+          </button>
+          <button
+            class="font-semibold leading-7 text-[16px] filter font-inter text-pColor transition"
+            data-filter="branding"
+          >
+            Branding
+          </button>
+          <button
+            class="font-semibold leading-7 text-[16px] filter font-inter text-pColor transition"
+            data-filter="design"
+          >
+            Design
+          </button>
+          <button
+            class="font-semibold leading-7 text-[16px] filter font-inter text-pColor transition"
+            data-filter="marketing"
+          >
+            Marketing
+          </button>
+          <button
+            class="font-semibold leading-7 text-[16px] filter font-inter text-pColor transition"
+            data-filter="development"
+          >
+            Development
+          </button>
+        </div>
+
+        <!-- Projects wrapper card -->
+        <div
+          class="grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 lg:gap-y-[50px] max-lg:gap-y-[45px] lg:gap-x-[30px] projects mt-[75px] w-full max-lg:mb-[138px]"
+        >
+          <!-- cards -->
+          <div
+            class="project min-h-[300px] rounded-[10px] flex flex-col mx-auto duration-500 hover:scale-105 cursor-pointer"
+            data-filter="branding"
+          >
+            <div>
+              <img src="./images/project-section/img-1.png" alt="project" />
+            </div>
+
+            <div
+              class="bg-white min-h-[185px] shadow-lg rounded-lg -mt-[23%] mx-[28px] flex flex-col text-center items-center justify-center shadow-boxShadow-500"
+            >
+              <p
+                class="text-primary text-[14px] leading-5 font-inter font-semibold mb-2"
+              >
+                Branding
+              </p>
+              <p
+                class="leading-6 text-textBlack text-[20px] font-inter font-bold mb-[18px]"
+              >
+                Branding Design
+              </p>
+              <button
+                class="bg-transparent text-pColor py-[11px] px-[32px] border border-[#EAEAEA] rounded-[5px] text-[14px] leading-6 font-normal font-inter hover:border-primary transition ease-in-out duration-300"
+              >
+                View Details
+              </button>
+            </div>
+          </div>
+
+          <div
+            class="project min-h-[300px] rounded-[10px] flex flex-col mx-auto duration-500 hover:scale-105 cursor-pointer"
+            data-filter="marketing"
+          >
+            <div>
+              <img src="./images/project-section/img-2.png" alt="project" />
+            </div>
+
+            <div
+              class="bg-white min-h-[185px] shadow-lg rounded-lg -mt-[23%] mx-[28px] flex flex-col text-center items-center justify-center shadow-boxShadow-500"
+            >
+              <p
+                class="text-primary text-[14px] leading-5 font-inter font-semibold mb-2"
+              >
+                Marketing
+              </p>
+              <p
+                class="leading-6 text-textBlack text-[20px] font-inter font-bold mb-[18px]"
+              >
+                Best Marketing tips
+              </p>
+              <button
+                class="bg-primary text-white py-[11px] px-[32px] border border-[#EAEAEA] rounded-[5px] text-[14px] leading-6 font-normal font-inter hover:border-pColor transition ease-in-out duration-300"
+              >
+                View Details
+              </button>
+            </div>
+          </div>
+
+          <div
+            class="project min-h-[300px] rounded-[10px] flex flex-col mx-auto duration-500 hover:scale-105 cursor-pointer"
+            data-filter="development"
+          >
+            <div>
+              <img src="./images/project-section/img-3.png" alt="project" />
+            </div>
+
+            <div
+              class="bg-white min-h-[185px] shadow-lg rounded-lg -mt-[23%] mx-[28px] flex flex-col text-center items-center justify-center shadow-boxShadow-500"
+            >
+              <p
+                class="text-primary text-[14px] leading-5 font-inter font-semibold mb-2"
+              >
+                Development
+              </p>
+              <p
+                class="leading-6 text-textBlack text-[20px] font-inter font-bold mb-[18px]"
+              >
+                Web Design Trend
+              </p>
+              <button
+                class="bg-transparent text-pColor py-[11px] px-[32px] border border-[#EAEAEA] rounded-[5px] text-[14px] leading-6 font-normal font-inter hover:border-primary transition ease-in-out duration-300"
+              >
+                View Details
+              </button>
+            </div>
+          </div>
+
+          <div
+            class="project min-h-[300px] rounded-[10px] flex flex-col mx-auto duration-500 hover:scale-105 cursor-pointer"
+            data-filter="design"
+          >
+            <div>
+              <img src="./images/project-section/img-4.png" alt="project" />
+            </div>
+
+            <div
+              class="bg-white min-h-[185px] shadow-lg rounded-lg -mt-[23%] mx-[28px] flex flex-col text-center items-center justify-center shadow-boxShadow-500"
+            >
+              <p
+                class="text-primary text-[14px] leading-5 font-inter font-semibold mb-2"
+              >
+                Design
+              </p>
+              <p
+                class="leading-6 text-textBlack text-[20px] font-inter font-bold mb-[18px]"
+              >
+                Business Card Design
+              </p>
+              <button
+                class="bg-transparent text-pColor py-[11px] px-[32px] border border-[#EAEAEA] rounded-[5px] text-[14px] leading-6 font-normal font-inter hover:border-primary transition ease-in-out duration-300"
+              >
+                View Details
+              </button>
+            </div>
+          </div>
+
+          <div
+            class="project min-h-[300px] rounded-[10px] flex flex-col mx-auto duration-500 hover:scale-105 cursor-pointer"
+            data-filter="marketing"
+          >
+            <div>
+              <img src="./images/project-section/img-5.png" alt="project" />
+            </div>
+
+            <div
+              class="bg-white min-h-[185px] shadow-lg rounded-lg -mt-[23%] mx-[28px] flex flex-col text-center items-center justify-center shadow-boxShadow-500"
+            >
+              <p
+                class="text-primary text-[14px] leading-5 font-inter font-semibold mb-2"
+              >
+                Marketing
+              </p>
+              <p
+                class="leading-6 text-textBlack text-[20px] font-inter font-bold mb-[18px]"
+              >
+                Dgital marketing
+              </p>
+              <button
+                class="bg-transparent text-pColor py-[11px] px-[32px] border border-[#EAEAEA] rounded-[5px] text-[14px] leading-6 font-normal font-inter hover:border-primary transition ease-in-out duration-300"
+              >
+                View Details
+              </button>
+            </div>
+          </div>
+
+          <div
+            class="project min-h-[300px] rounded-[10px] flex flex-col mx-auto duration-500 hover:scale-105 cursor-pointer"
+            data-filter="branding"
+          >
+            <div>
+              <img src="./images/project-section/img-6.png" alt="project" />
+            </div>
+
+            <div
+              class="bg-white min-h-[185px] shadow-lg rounded-lg -mt-[23%] mx-[28px] flex flex-col text-center items-center justify-center shadow-boxShadow-500"
+            >
+              <p
+                class="text-primary text-[14px] leading-5 font-inter font-semibold mb-2"
+              >
+                Branding
+              </p>
+              <p
+                class="leading-6 text-textBlack text-[20px] font-inter font-bold mb-[18px]"
+              >
+                Creative Agency
+              </p>
+              <button
+                class="bg-transparent text-pColor py-[11px] px-[32px] border border-[#EAEAEA] rounded-[5px] text-[14px] leading-6 font-normal font-inter hover:border-primary transition ease-in-out duration-300"
+              >
+                View Details
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact-section -->
+    <section class="lg:py-[120px] max-lg:pb-[85px]">
+      <div class="wrapper">
+        <div
+          class="flex justify-center items-center w-full max-md:gap-[50px] md:gap-[130px] max-md:flex-col"
+        >
+          <!-- email -->
+          <div class="flex flex-col items-center justify-center">
+            <div class="mb-[18px]">
+              <img
+                src="./images/information-section/email.svg"
+                alt="email"
+                class="max-md:h-[55px] max-md:w-[55px]"
+              />
+            </div>
+            <h3
+              class="mb-3 font-semibold font-inter text-[18px] leading-[22px]"
+            >
+              Email Address
+            </h3>
+            <p
+              class="mb-[6px] text-pColor text-[15px] leading-[19px] font-normal font-inter"
+            >
+              info@example.com
+            </p>
+            <p
+              class="text-pColor text-[15px] leading-[19px] font-normal font-inter"
+            >
+              support@example.com
+            </p>
+          </div>
+
+          <!-- telephone -->
+          <div class="flex flex-col items-center justify-center">
+            <div class="mb-[18px]">
+              <img
+                src="./images/information-section/phone.svg"
+                alt="phone"
+                class="max-md:h-[55px] max-md:w-[55px]"
+              />
+            </div>
+            <h3
+              class="mb-3 font-semibold font-inter text-[18px] leading-[22px]"
+            >
+              Phone Number
+            </h3>
+            <p
+              class="mb-[6px] text-pColor text-[15px] leading-[19px] font-normal font-inter"
+            >
+              +88 (800) 123 4567
+            </p>
+            <p
+              class="text-pColor text-[15px] leading-[19px] font-normal font-inter"
+            >
+              +99 094 5445 433
+            </p>
+          </div>
+
+          <!-- location -->
+          <div class="flex flex-col items-center justify-center">
+            <div class="mb-[18px]">
+              <img
+                src="./images/information-section/address.svg"
+                alt="location"
+                class="max-md:h-[55px] max-md:w-[55px]"
+              />
+            </div>
+            <h3
+              class="mb-3 font-semibold font-inter text-[18px] leading-[22px]"
+            >
+              Our Address
+            </h3>
+            <p
+              class="text-pColor text-[15px] leading-[22px] font-normal font-inter text-center"
+            >
+              82 12th Street, Office 14, <br />
+              Edinburgh, UK
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Form-section -->
+    <section class="bg-[#F7F8FA] lg:py-[120px] max-lg:py-[54px]">
+      <div class="wrapper">
+        <div class="flex flex-col items-center w-full text-center">
+          <p
+            class="font-semibold leading-6 text-primary font-inter text-[18px] mb-2"
+          >
+            Contact Us
+          </p>
+          <h3
+            class="font-bold font-inter lg:leading-[45px] lg:text-[40px] max-lg:text-[28px] max-lg:leading-[38px] text-secondTextBlack max-lg:max-w-[300px] mb-[21px]"
+          >
+            How Can We Help You?
+          </h3>
+          <p
+            class="font-normal font-inter max-lg:max-w-[310px] text-pColor leading-[25px] text-[16px] lg:mb-[70px] max-lg:mb-[52px]"
+          >
+            There are many variations of passages of Lorem Ipsum available
+            <span class="max-lg:hidden"><br /></span> but the majority have
+            suffered alteration in some form.
+          </p>
+        </div>
+
+        <!-- form -->
+        <form class="flex flex-col">
+          <div class="flex max-lg:flex-col lg:gap-[30px]">
+            <div class="flex-1">
+              <label
+                class="block font-bold text-text-textBlack mb-[21px]"
+                for="name"
+              >
+                Your Name
+                <span
+                  class="text-red text-[16px] font-inter font-semibold leading-[19px]"
+                  >*</span
+                >
+              </label>
+              <input
+                class="w-full p-5 max-lg:h-[40px] lg:h-[60px] leading-tight text-pColor border rounded-[5px] shadow appearance-none focus:outline-none focus:shadow-outline"
+                id="name"
+                type="text"
+              />
+            </div>
+
+            <div class="flex-1 max-lg:mt-[21px]">
+              <label
+                class="block font-bold text-text-textBlack mb-[21px]"
+                for="email"
+              >
+                Your Email
+                <span
+                  class="text-red text-[16px] font-inter font-semibold leading-[19px]"
+                  >*</span
+                >
+              </label>
+              <input
+                class="w-full p-5 max-lg:h-[40px] lg:h-[60px] leading-tight text-pColor border rounded-[5px] shadow appearance-none focus:outline-none focus:shadow-outline"
+                id="email"
+                type="email"
+              />
+            </div>
+          </div>
+
+          <div>
+            <label
+              class="block mb-[21px] mt-[36px] font-inter font-semibold text-[16px] leading-[19px] text-textBlack"
+              for="message"
+            >
+              Message
+              <span
+                class="text-red text-[16px] font-inter font-semibold leading-[19px]"
+                >*</span
+              >
+            </label>
+            <textarea
+              class="w-full max-lg:h-[140px] lg:h-[165px] p-5 leading-tight text-pColor border rounded-[5px] shadow appearance-none focus:outline-none focus:shadow-outline"
+              id="message"
+              rows="4"
+            ></textarea>
+          </div>
+
+          <div class="lg:mt-[35px] max-lg:mt-[31px]">
+            <div class="flex items-center gap-3">
+              <input id="confirm" type="checkbox" class="w-5 h-5" />
+              <label
+                class="font-normal leading-5 font-inter text-pColor lg:text-[16px] max-lg:text-[14px]"
+                for="confirm"
+              >
+                I agree that my submitted data is being collected and stored.
+              </label>
+            </div>
+          </div>
+
+          <div
+            class="flex items-center justify-center lg:mt-[70px] max-lg:mt-[30px]"
+          >
+            <button
+              class="text-white rounded-[5px] leading-5 bg-primary focus:outline-none focus:shadow-outline lg:px-[128px] lg:py-[21px] max-lg:px-[100px] max-lg:py-[12px] lg:text-[16px] max-lg:text-[14px] font-inter font-semibold"
+              type="submit"
+            >
+              Send Message
+            </button>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="lg:py-[110px] max-lg:py-[55px] relative">
+      <div class="wrapper">
+        <div
+          class="flex w-full lg:gap-[68px] max-lg:gap-[52px] lg:items-center max-lg:flex-col"
+        >
+          <div class="flex-1 lg:min-h-[200px] lg:mt-[-25px] z-20">
+            <img
+              src="./images/footer/logo.svg"
+              alt="footer-logo"
+              class="w-[70px] mb-[21px]"
+            />
+
+            <p
+              class="mb-[25px] font-inter font-normal leading-[25px] text-pColor text-[15px] max-md:max-w-[270px]"
+            >
+              Sed ut perspiciatis undmnis is iste natus error sit amet
+              voluptatem totam rem aperiam.
+            </p>
+            <div class="flex items-center gap-3">
+              <img src="./images/footer/telephone.svg" alt="footer-tel" />
+              <p
+                class="font-inter text-textBlack text-[14px] leading-[25px] font-medium"
+              >
+                +012 (345) 678 99
+              </p>
+            </div>
+          </div>
+
+          <div class="flex-1 lg:min-h-[200px]">
+            <h4
+              class="font-semibold text-textBlack font-inter text-[18px] leading-[24px] mb-[35px]"
+            >
+              Resources
+            </h4>
+
+            <ul class="flex flex-col gap-[15px]">
+              <li
+                class="text-primary font-inter text-[15px] leading-5 font-normal"
+              >
+                Saas Development
+              </li>
+              <li
+                class="font-normal text-pColor font-inter text-[15px] leading-5"
+              >
+                Our Products
+              </li>
+              <li
+                class="font-normal text-pColor font-inter text-[15px] leading-5"
+              >
+                Our Products
+              </li>
+              <li
+                class="font-normal text-pColor font-inter text-[15px] leading-5"
+              >
+                User Strategy
+              </li>
+            </ul>
+          </div>
+
+          <div class="flex-1 lg:min-h-[200px]">
+            <h4
+              class="font-semibold text-textBlack font-inter text-[18px] leading-[24px] mb-[35px]"
+            >
+              Company
+            </h4>
+            <ul class="flex flex-col gap-[15px]">
+              <li
+                class="font-normal text-pColor font-inter text-[15px] leading-5"
+              >
+                About Landio
+              </li>
+              <li
+                class="font-normal text-pColor font-inter text-[15px] leading-5"
+              >
+                Contact & Support
+              </li>
+              <li
+                class="font-normal text-pColor font-inter text-[15px] leading-5"
+              >
+                Success History
+              </li>
+              <li
+                class="font-normal text-pColor font-inter text-[15px] leading-5"
+              >
+                Setting & Privacy
+              </li>
+            </ul>
+          </div>
+
+          <div class="flex-1 lg:min-h-[200px]">
+            <h4
+              class="font-semibold text-textBlack font-inter text-[18px] leading-[24px] mb-[35px]"
+            >
+              Quick Links
+            </h4>
+            <ul class="flex flex-col gap-[15px]">
+              <li
+                class="font-normal text-pColor font-inter text-[15px] leading-5"
+              >
+                Premium Support
+              </li>
+              <li
+                class="font-normal text-pColor font-inter text-[15px] leading-5"
+              >
+                Our Services
+              </li>
+              <li
+                class="font-normal text-pColor font-inter text-[15px] leading-5"
+              >
+                Know Our Team
+              </li>
+              <li
+                class="font-normal text-pColor font-inter text-[15px] leading-5"
+              >
+                Download App
+              </li>
+            </ul>
+          </div>
+
+          <div class="flex-1 lg:min-h-[200px]">
+            <h4
+              class="font-semibold text-textBlack font-inter text-[18px] leading-[24px] mb-[35px]"
+            >
+              Follow Us On
+            </h4>
+            <div class="flex flex-row w-full gap-[15px] mb-[25px] flex-wrap">
+              <img
+                src="./images/footer/facebook.svg"
+                alt="footer-facebook"
+                class="cursor-pointer"
+              />
+              <img
+                src="./images/footer/twitter.svg"
+                alt="twitter-facebook"
+                class="cursor-pointer"
+              />
+              <img
+                src="./images/footer/youtube.svg"
+                alt="footer-youtube"
+                class="cursor-pointer"
+              />
+              <img
+                src="./images/footer/linkedin.svg"
+                alt="footer-linkedin"
+                class="cursor-pointer"
+              />
+            </div>
+            <p>© 2023 TailGrids.</p>
+          </div>
+        </div>
+      </div>
+
+      <img
+        src="./images/footer/elipse-bottomRight.svg"
+        alt="elipse-bottomRight"
+        class="absolute bottom-0 left-0 lg:h-[281px] lg:w-[281px] max-lg:hidden"
+      />
+    </footer>
+
+    <!-- script -->
+    <script type="module" src="./src/index.js"></script>
+  </body>
+</html>

@@ -1,0 +1,20 @@
+// style.scss
+
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+// Global
+.wrapper {
+  @apply lg:container lg:mx-auto max-lg:mx-6;
+}
